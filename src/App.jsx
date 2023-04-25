@@ -3,8 +3,8 @@
 function App() {
   return (
   <>
-    <header className='text-gray-700 border-b border-gray-200'>
-      <div className='container flex mx-auto p-5 flex-col md:flex-row items-center' >
+    <header className='text-gray-700 border-b border-gray-200 bg-green-300'>
+      <div className='container flex mx-auto p-5 flex-col md:flex-row items-center ' >
         <a href="#" className='font-medium text-gray-900 mb-4 md:mb-0'>
           <span className='text-xl ml-3'>Shincode</span>
         </a>
@@ -35,7 +35,7 @@ function App() {
       </div>
     </section>
 
-    <section className='text-gray-700 border-t border-gray-200'>
+    <section className='text-gray-700 border-t border-gray-200' id="About">
       <div className='container px-5 py-24 mx-auto' >
         <div className='text-center mb-20'>
           <h1 className='text-2xl sm:text-3xl font-medium text-gray-900'>About Me</h1>
@@ -45,11 +45,10 @@ function App() {
             qui doloremque a beatae ullam at deleniti vitae quae officia? 
             Eveniet, ex cupiditate? Voluptates sed autem saepe quos!
           </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Ducimus expedita tempore dolorum exercitationem commodi iste? 
-            Nihil, corporis molestias fugiat porro obcaecati et odit est alias error numquam nobis deleniti praesentium. 
-            Cupiditate esse sunt natus libero aperiam, voluptas saepe minus architecto odio omnis quam impedit dignissimos laborum. 
-            Quas porro quo magni quasi!</p>
+          <p>臨床検査技師として勤務しておりましたが、心機一転してプログラミングの世界に飛び込みました。
+            JavaやPythonでの学習歴もあり、実務経験もございます。 
+             
+            現在はJavaScriptやReactを中心に学習を進めております。</p>
         </div>
         {/*カードのdivタグ*/}
         <div className='flex flex-wrap'>
@@ -70,9 +69,8 @@ function App() {
                 <h2 className='text-gray-900 text-lg font-medium ml-2'>Web Developer</h2>
               </div>
               <div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, 
-                  quia iure dolorum nobis ducimus maxime blanditiis consequatur ullam tenetur dicta.</p>
-              <a href="#" className='flex mt-3 text-green-500 items-center'>
+              <p>Reactを用いて、タスクのドラッグ&ドロップ機能があるTodoアプリを作成しました。</p>
+              <a href="https://draganddrop-tutorial.vercel.app/" className='flex mt-3 text-green-500 items-center'>
                 もっと見る
                 <svg
                   width="24"
@@ -107,9 +105,8 @@ function App() {
                 <h2 className='text-gray-900 text-lg font-medium ml-2'>Web Developer</h2>
               </div>
               <div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, 
-                  quia iure dolorum nobis ducimus maxime blanditiis consequatur ullam tenetur dicta.</p>
-              <a href="#" className='flex mt-3 text-green-500 items-center'>
+              <p>HTMLとCSS,およびJavaScriptの学習のため、架空の企業のホームページを作成しました。</p>
+              <a href="https://hellonewworldjs2023.github.io/HTML-Coding/index.html" className='flex mt-3 text-green-500 items-center'>
                 もっと見る
                 <svg
                   width="24"
@@ -168,7 +165,7 @@ function App() {
       </div>
     </section>
 
-    <section  className='text-gray-700 border-t border-gray-200'>
+    <section  className='text-gray-700 border-t border-gray-200' id="Skills">
       <div className='container px-5 py-24 mx-auto flex flex-wrap'>
         {/*left side*/}
         <div className='mb-10 lg:mb-0 w-full lg:w-1/2 flex justify-center'>
@@ -193,16 +190,24 @@ function App() {
               <div className='bg-green-600 text-xs leading-none py-1 text-center text-white'
               style={{width:"65%"}}>65%</div>
             </div>
-            <h2>HTML</h2>
+            <h2>React</h2>
             <div className='shadow bg-green-100 mt-2 w-full'>
               <div className='bg-green-600 text-xs leading-none py-1 text-center text-white'
-              style={{width:"85%"}}>85%</div>
+              style={{width:"60%"}}>60%</div>
             </div>
           </div>
         </div>
       </div>
 
     </section>
+
+    <footer className="text-gray-700 border-gray-200 bg-green-300" >
+      <div className="container mx-auto">
+        <div className="text-center">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, impedit?</p>
+        </div>
+      </div>
+    </footer>
   </>
   );
 }
