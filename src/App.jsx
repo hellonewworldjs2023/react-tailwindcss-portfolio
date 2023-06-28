@@ -24,9 +24,7 @@ function App() {
           I'm Shinnosuke Hatta<br/>
           Web Developer
           </h1>
-          <p className='mb-8 leading-relaxed'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Tenetur nam maiores cum, 
-            quasi pariatur facilis vero id molestiae ratione repellat.</p>
+          <p className='mb-8 leading-relaxed'>I made this page for the purpose of the appeal of my skills. </p>
           <button className='text-white bg-green-500 py-2 px-6 border-0 rounded text-lg hover:bg-green-600 duration-300'> Contact Me</button>
         </div>
         <div className='md:w-1/2 lg:max-w-lg w-5/6'>
@@ -38,13 +36,8 @@ function App() {
     <section className='text-gray-700 border-t border-gray-200' id="About">
       <div className='container px-5 py-24 mx-auto' >
         <div className='text-center mb-20'>
-          <h1 className='text-2xl sm:text-3xl font-medium text-gray-900'>About Me</h1>
-          <p className='pb-10'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Sunt, consectetur exercitationem facere, 
-            qui doloremque a beatae ullam at deleniti vitae quae officia? 
-            Eveniet, ex cupiditate? Voluptates sed autem saepe quos!
-          </p>
+          <h1 className='text-2xl  pb-10 sm:text-3xl font-medium text-gray-900'>About Me</h1>
+          
           <p>臨床検査技師として勤務しておりましたが、心機一転してプログラミングの世界に飛び込みました。
             JavaやPythonでの学習歴もあり、実務経験もございます。 
              
@@ -239,7 +232,8 @@ function App() {
     <footer className="text-gray-700 border-gray-200 bg-green-300" >
       <div className="container mx-auto">
         <div className="text-center">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, impedit?</p>
+          <br/>
+          <p>©Shinnnosuke Hatta</p>
         </div>
       </div>
     </footer>
