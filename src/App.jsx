@@ -63,7 +63,7 @@ function App() {
               </div>
               <div>
               <p>Reactを用いて、タスクのドラッグ&ドロップ機能があるTodoアプリを作成しました。</p>
-              <a href="https://draganddrop-tutorial.vercel.app/" className='flex mt-3 text-green-500 items-center'>
+              <a href="https://draganddrop-app-zeta.vercel.app/" className='flex mt-3 text-green-500 items-center'>
                 もっと見る
                 <svg
                   width="24"
