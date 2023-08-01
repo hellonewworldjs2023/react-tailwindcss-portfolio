@@ -1,6 +1,71 @@
+import {motion, useAnimation} from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 
 function App() {
+
+  const controll1 = useAnimation();
+  const controll2 = useAnimation();
+  const [ref1,isInView1] = useInView({triggerOnce: true});
+  const [ref2,isInView2] = useInView({triggerOnce: true});
+
+  useEffect(
+    () =>{
+      if(isInView1){
+        controll1.start("visible");
+      }
+    },
+    [isInView1]
+  );
+
+  useEffect(
+    () =>{
+      if(isInView2){
+        controll2.start("visible");
+      }
+    },
+    [isInView2]
+  );
+
+  const scrollVariants = {
+    visible: {
+      y:0,
+      opacity:1,
+      transition:{
+        duration:1,
+        delay:0.8,
+        type:"spring",
+      },
+    },
+    hidden:{
+      y:60,
+      opacity:0
+    }
+
+    
+  }
+
+  const twistScrollVariants = {
+    visible: {
+      y:0,
+      opacity:1,
+      rotate:0,
+      transition:{
+        duration:1,
+        delay:0.8,
+        type:"spring",
+      },
+    },
+    hidden:{
+      y:120,
+      opacity:0,
+      rotate:80,
+    }
+
+    
+  }
+
   return (
   <>
     <header className='text-gray-700 border-b border-gray-200 bg-green-300'>
@@ -27,9 +92,11 @@ function App() {
           <p className='mb-8 leading-relaxed'>I made this page for the purpose of the appeal of my skills. </p>
           <button className='text-white bg-green-500 py-2 px-6 border-0 rounded text-lg hover:bg-green-600 duration-300'> Contact Me</button>
         </div>
-        <div className='md:w-1/2 lg:max-w-lg w-5/6'>
+        <motion.div className='md:w-1/2 lg:max-w-lg w-5/6'
+        ref = {ref1} variants={scrollVariants}
+        initial = "hidden" animate = {controll1}>
           <img src="./img/aqualium.jpg" alt="" />
-        </div>
+        </motion.div>
       </div>
     </section>
 
@@ -45,7 +112,9 @@ function App() {
         </div>
         {/*カードのdivタグ*/}
         <div className='flex flex-wrap'>
-          <div className='md:w-1/4 p-4'>
+          <motion.div className='md:w-1/4 p-4'
+          ref = {ref2} variants={twistScrollVariants}
+          initial = "hidden" animate = {controll2}>
             <div className='bg-gray-100 rounded-lg p-8'>
               <div className='flex items-center mb-3'>
                 <div className='bg-green-500 text-white rounded-full'>
@@ -80,8 +149,10 @@ function App() {
               </a>
               </div>
             </div>
-          </div>
-          <div className='md:w-1/4 p-4' >
+          </motion.div>
+          <motion.div className='md:w-1/4 p-4'
+          ref = {ref2} variants={twistScrollVariants}
+          initial = "hidden" animate = {controll2}>
             <div className='bg-gray-100 rounded-lg p-8'>
               <div className='flex items-center mb-3'>
                 <div className='bg-green-500 text-white rounded-full'>
@@ -116,8 +187,10 @@ function App() {
               </a>
               </div>
             </div>
-          </div>
-          <div className='md:w-1/4 p-4'>
+          </motion.div>
+          <motion.div className='md:w-1/4 p-4'
+          ref = {ref2} variants={twistScrollVariants}
+          initial = "hidden" animate = {controll2}>
             <div className='bg-gray-100 rounded-lg p-8'>
               <div className='flex items-center mb-3'>
                 <div className='bg-green-500 text-white rounded-full'>
@@ -152,8 +225,10 @@ function App() {
               </a>
               </div>
             </div>
-          </div>
-          <div className='md:w-1/4 p-4'>
+          </motion.div>
+          <motion.div className='md:w-1/4 p-4'
+          ref = {ref2} variants={twistScrollVariants}
+          initial = "hidden" animate = {controll2}>
             <div className='bg-gray-100 rounded-lg p-8'>
               <div className='flex items-center mb-3'>
                 <div className='bg-green-500 text-white rounded-full'>
@@ -189,7 +264,7 @@ function App() {
               </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
