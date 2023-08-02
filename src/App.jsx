@@ -7,8 +7,10 @@ function App() {
 
   const controll1 = useAnimation();
   const controll2 = useAnimation();
+  const controll3 = useAnimation();
   const [ref1,isInView1] = useInView({triggerOnce: true});
   const [ref2,isInView2] = useInView({triggerOnce: true});
+  const [ref3,isInView3] = useInView({triggerOnce: true});
 
   useEffect(
     () =>{
@@ -27,6 +29,16 @@ function App() {
     },
     [isInView2]
   );
+
+  useEffect(
+    () =>{
+      if(isInView3){
+        controll3.start("visible");
+      }
+    },
+    [isInView3]
+  );
+
 
   const scrollVariants = {
     visible: {
@@ -61,6 +73,24 @@ function App() {
       y:120,
       opacity:0,
       rotate:80,
+    }
+
+    
+  }
+
+  const slideVariants = {
+    visible: {
+      x:0,
+      opacity:1,
+      transition:{
+        duration:1,
+        delay:0.8,
+        type:"spring",
+      },
+    },
+    hidden:{
+      x:60,
+      opacity:0
     }
 
     
@@ -276,7 +306,9 @@ function App() {
           <img src="./img/pc.jpg" alt="" className='rounded'/>
         </div>
         {/*right side*/}
-        <div className='lg:pl-12 lg:py-6 w-full lg:w-1/2' >
+        <motion.div className='lg:pl-12 lg:py-6 w-full lg:w-1/2'
+        ref = {ref3} variants={slideVariants}
+        initial = "hidden" animate = {controll3} >
           <h1 className='text-2xl sm:text-3xl font-medium text-gray-900 mb-10 text-center lg:text-left'> My Skills</h1>
           <div className='w-full'>
             <h2>HTML</h2>
@@ -300,7 +332,7 @@ function App() {
               style={{width:"60%"}}>60%</div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
     </section>
