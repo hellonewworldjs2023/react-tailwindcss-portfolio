@@ -331,6 +331,11 @@ function App() {
               <div className='bg-green-600 text-xs leading-none py-1 text-center text-white'
               style={{width:"60%"}}>60%</div>
             </div>
+            <h2>Java</h2>
+            <div className='shadow bg-green-100 mt-2 w-full'>
+              <div className='bg-green-600 text-xs leading-none py-1 text-center text-white'
+              style={{width:"60%"}}>60%</div>
+            </div>
           </div>
         </motion.div>
       </div>
