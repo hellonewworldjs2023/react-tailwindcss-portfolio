@@ -277,6 +277,7 @@ function App() {
               <div>
               <p>ReactとTailwindCSSを用いて、サウナの情報サイトを作成しました。</p>
               <p>React Router v6を用いてページが自動作成されるようにしました。</p>
+              <p>また、各都道府県ごとに天気予報を見ることができます。</p>
               <a href="https://sauna-search.vercel.app/" className='flex mt-3 text-green-500 items-center'>
                 もっと見る
                 <svg
